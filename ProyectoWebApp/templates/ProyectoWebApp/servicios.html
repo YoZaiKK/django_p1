@@ -4,9 +4,11 @@
 
 {%block content %} 
 
-<!-- Message -->
-<section class="page-section cta">
-  <h1>Servicios</h1>
-</section>
+  {%for servicio in servicios %}
+  <h2 style="color: white;">{{servicio.titulo}}</h2>
+  <p style="color: white;">{{servicio.contenido}}</p>
+  <p> <img src = "{{servicio.imagen.url}}"></p>
+
+  {% endfor %} 
 
 {% endblock %} 

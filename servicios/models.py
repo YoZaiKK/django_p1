@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
@@ -6,7 +7,7 @@ from django.db import models
 class Servicio(models.Model):
     titulo = models.CharField(max_length=50)
     contenido = models.CharField(max_length=50)
-    imagen = models.ImageField() # Se necesita instalar Pillow para el manejo de this
+    imagen = models.ImageField(upload_to='servicios') # Se necesita instalar Pillow para el manejo de this
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
     
