@@ -269,3 +269,13 @@ ul.errorlist {
     font-style: italic;
     color: red;
 }
+
+.linksCategorias {
+    color: white;
+    text-decoration: underline;
+}
+
+.linksCategorias:hover {
+    color: rgb(170, 250, 216);
+    text-decoration: none;
+}

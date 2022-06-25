@@ -20,9 +20,19 @@
     </div>
 </section>
 <section>
-    <div style="text-align:center; text-transform: capitalize; width: 80%; margin: auto; color:white">
-        Categorias: {% for categoria in post.categorias.all%}{{categoria.nombre}}&nbsp; {% endfor %}
-    </div>
+  <div
+    style="
+      text-align: center;
+      text-transform: capitalize;
+      width: 80%;
+      margin: auto;
+      color: white;
+    "
+  >
+    Categorias: {% for categoria in post.categorias.all%}
+    <a href="{% url 'categoria' categoria.id %}" class="linksCategorias">{{categoria.nombre}} </a>
+    &nbsp; {% endfor %}
+  </div>
 </section>
 {% endfor %}
 
