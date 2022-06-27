@@ -4,9 +4,22 @@
 
 {%block content %} 
 
-<!-- Message -->
+<!-- Message --> 
+<div class="contenedorFormulario">
+  {% if "valido" in request.GET%}
+  <p>Bien hecho!<br> Formulario compleado y entregado</p>
+  {% endif %}
+  <form action="" method="post" style="text-align:center">
+    {% csrf_token %}
+    <table>
+      {{miFormulario.as_table}}
+    </table> 
+    <input type="submit" value="Enviar" style="width:150px">
+  </form>
+</div>
 <section class="page-section cta">
-  <h1>Andamos en contacto</h1>
+  {{request.POST}}
 </section>
+
 
 {% endblock %} 

@@ -279,3 +279,25 @@ ul.errorlist {
     color: rgb(170, 250, 216);
     text-decoration: none;
 }
+
+.contenedorFormulario {
+    background-color: rgba(24, 64, 8, 0.558);
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 1px 0px
+}
+
+.contenedorFormulario table {
+    margin: 20px auto;
+    color: white;
+}
+
+.contenedorFormulario p {
+    background: rgba(55, 140, 21, 0.582);
+    margin: 20px 0px 20px 20px;
+    color: white;
+    width: 30%;
+    border-radius: 5px;
+    padding: 5px;
+}
