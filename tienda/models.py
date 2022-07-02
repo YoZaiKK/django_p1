@@ -1,5 +1,4 @@
-from django.db import models
-from django.contrib.auth.models import User
+from django.db import models 
 
 # Create your models here.
 class CategoriaProd(models.Model):
@@ -31,4 +30,4 @@ class Producto(models.Model):
         verbose_name_plural = 'productos'
     
     def __str__(self):
-        return self.titulo
+        return self.nombre
