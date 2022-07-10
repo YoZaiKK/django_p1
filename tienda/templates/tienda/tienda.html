@@ -1,23 +1,18 @@
 {% extends "ProyectoWebApp/base.html" %} {% load static %} {%block content %}
 <!-- Heading -->
-{%for producto in productos %}
-
-<section class="page-section clearfix">
-  <div class="container">
-    <div class="intro">
-      <img
-        class="intro-img img-fluid mb-3 mb-lg-0 rounded"
-        src=" {{producto.imagen.url}}"
-        alt=""
-        style="max-width: 300px"
-      />
-      <div class="left-0 text-center bg-faded p-5 rounded">
-        <h2 class="section-heading mb-4">
-          <span class="section-heading-lower">{{producto.nombre}}</span>
-        </h2>
-        <p class="mb-3">{{producto.descripcion}}</p>
+<div class="container">
+  <div class="row">
+    {%for producto in productos %}
+    <div class="col-md-3" style="margin:5px 0px">
+      <div class="card">
+        <img class="card-img-top" src=" {{producto.imagen.url}}" />
+        <div class="card-body" class="text-align:center">
+          <h6 class="card-title">{{producto.nombre}}</h6>
+          <p class="card-text">{{producto.precio}}&nbsp;$</p>
+        </div>
       </div>
     </div>
+    {% endfor %} 
   </div>
-</section>
-{% endfor %} {% endblock %}
+</div>
+{% endblock %}
