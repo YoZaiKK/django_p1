@@ -2,11 +2,15 @@ class Carro:
     # detectar la request
     # construir la session
     # construir el carro
+    
+    def guardar_carro(self):
+        self.session['carro'] = self.carro
+        self.session.modified = True
+        
     def __init__(self, request):
-        self.request = request  #aqui almacenamos la peticion
-        self.session = request.session  #tenemos iniciada la session
-        carro = self.session.get(
-            'carro')  #aqui identifica el string con el carro
+        self.request = request
+        self.session = request.session
+        carro = self.session.get('carro')
         if not carro:  # Lo creamos, vea
             carro = self.session['carro'] = {}  # inicializamos el carro
         else:  # Ps no lo creamos, vea
@@ -28,9 +32,6 @@ class Carro:
                     break
         self.guardar_carro()
 
-    def guardar_carro(self):
-        self.session['carro'] = self.carro
-        self.session.modified = True
 
     def eliminar(self, producto):
         producto.id = str(producto.id)
@@ -38,7 +39,7 @@ class Carro:
             del self.carro[producto.id]
             self.guardar_carro()
 
-    def restar_producto(self, producto):
+    def restar(self, producto):
         for key, value in self.carro.items():
             if key == str(producto.id):
                 value['cantidad'] = value['cantidad'] - 1
@@ -46,7 +47,7 @@ class Carro:
                     self.eliminar(producto)
                 break
         self.guardar_carro()
-        
-    def vaciar_carro(self, producto):
+
+    def vaciar(self):
         self.session['carro'] = {}
         self.session.modified = True

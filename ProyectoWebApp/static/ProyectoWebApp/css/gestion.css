@@ -78,7 +78,7 @@ p {
 }
 
 #mainNav {
-    background-color: rgba(24, 64, 8);
+    background-color: rgba(8, 55, 64);
     font-family: 'Raleway';
 }
 
@@ -101,7 +101,7 @@ p {
         font-size: 0.9rem;
     }
     #mainNav .navbar-nav .nav-item .nav-link:hover {
-        color: rgba(255, 255, 255, 0.4);
+        color: rgba(26, 135, 157, 0.658);
         text-decoration: underline;
     }
     #mainNav .navbar-nav .nav-item.active .nav-link:hover {
@@ -132,7 +132,7 @@ p {
         left: 600;
         width: 60%;
         margin-top: 3rem;
-        background-color: rgba(24, 64, 8);
+        background-color: rgba(8, 55, 64);
         color: cornsilk;
         position: absolute;
     }
@@ -153,33 +153,32 @@ p {
 .cta {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: rgb(242, 245, 240);
+    background-color: rgba(242, 245, 240, 0.571);
 }
 
 .cta .cta-inner {
     position: relative;
     padding: 3rem;
     margin: 0.5rem;
-    background-color: rgba(24, 64, 8);
-    color: cornsilk;
+    background-color: rgba(8, 55, 64);
+    color: rgba(242, 245, 240, 0.888);
 }
 
 .cta .cta-inner:before {
     border-radius: 0.5rem;
-    content: '';
     position: absolute;
     top: -0.5rem;
     bottom: -0.5rem;
     left: -0.5rem;
     right: -0.5rem;
-    border: 0.25rem solid rgba(255, 255, 255, 0.85);
+    border: 0.25rem solid rgba(242, 245, 240, 0.571);
 }
 
 .cta .cta-innerv {
     position: relative;
     padding: 3rem;
     margin: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(242, 245, 240, 0.571);
 }
 
 @media (min-width: 992px) {
@@ -225,11 +224,11 @@ p {
 }
 
 .footer {
-    background-color: rgba(24, 64, 8, 0.8);
+    background-color: rgba(8, 55, 64, 0.8);
 }
 
 .btn {
-    box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+    box-shadow: 0px 3px 3px 0px rgba(33, 38, 41, 0.1);
 }
 
 .font-weight-light {
@@ -281,7 +280,7 @@ ul.errorlist {
 }
 
 .contenedorFormulario {
-    background-color: rgba(24, 64, 8, 0.558);
+    background-color: rgba(255, 255, 255, 0.42);
     width: 50%;
     margin: 10px auto;
     border-radius: 5px;
@@ -290,11 +289,11 @@ ul.errorlist {
 
 .contenedorFormulario table {
     margin: 20px auto;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .contenedorFormulario p {
-    background: rgba(55, 140, 21, 0.582);
+    background: rgba(21, 122, 140, 0.582);
     margin: 20px 0px 20px 20px;
     color: white;
     width: 30%;
