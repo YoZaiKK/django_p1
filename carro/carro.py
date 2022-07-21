@@ -13,11 +13,11 @@ class Carro:
         carro = self.session.get('carro')
         if not carro:  # Lo creamos, vea
             carro = self.session['carro'] = {}  # inicializamos el carro
-        else:  # Ps no lo creamos, vea
-            self.carro = carro
+        # else:  # Ps no lo creamos, vea
+        self.carro = carro
 
     def agregar(self, producto):  #funcion que agregue los productos al carro
-        if (str(producto.id) not in self.carro.key()):
+        if (str(producto.id) not in self.carro.keys()):
             self.carro[producto.id] = {
                 'producto_id': producto.id,
                 'nombre': producto.nombre,
@@ -35,7 +35,7 @@ class Carro:
 
     def eliminar(self, producto):
         producto.id = str(producto.id)
-        if producto.id in self.carro.key():
+        if producto.id in self.carro.keys():
             del self.carro[producto.id]
             self.guardar_carro()
 
@@ -43,7 +43,7 @@ class Carro:
         for key, value in self.carro.items():
             if key == str(producto.id):
                 value['cantidad'] = value['cantidad'] - 1
-                if value['cantidad'] < 1:
+                if value['cantidad'] == 0:
                     self.eliminar(producto)
                 break
         self.guardar_carro()
