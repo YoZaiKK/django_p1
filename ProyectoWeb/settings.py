@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'tienda',
     'carro',
     'autenticacion',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,5 @@ EMAIL_HOST_PASSWORD = 'jhgvgslxgqeycurw' #paste the key or password app here
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = 'default from email'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
