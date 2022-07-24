@@ -8,12 +8,11 @@ class Carro:
         self.session.modified = True
         
     def __init__(self, request):
-        self.request = request
-        self.session = request.session
-        carro = self.session.get('carro')
-        if not carro:  # Lo creamos, vea
-            carro = self.session['carro'] = {}  # inicializamos el carro
-        # else:  # Ps no lo creamos, vea
+        # self.request = request
+        # self.session = request.session
+        # carro = self.session.get('carro')
+        # if not carro:  # Lo creamos, vea
+        #     carro = self.session['carro'] = {}  # inicializamos el carro 
         self.carro = carro
 
     def agregar(self, producto):  #funcion que agregue los productos al carro
