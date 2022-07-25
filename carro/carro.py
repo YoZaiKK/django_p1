@@ -1,18 +1,15 @@
-class Carro:
-    # detectar la request
-    # construir la session
-    # construir el carro
+class Carro: 
     
     def guardar_carro(self):
         self.session['carro'] = self.carro
         self.session.modified = True
         
     def __init__(self, request):
-        # self.request = request
-        # self.session = request.session
-        # carro = self.session.get('carro')
-        # if not carro:  # Lo creamos, vea
-        #     carro = self.session['carro'] = {}  # inicializamos el carro 
+        self.request = request
+        self.session = request.session
+        carro = self.session.get('carro')
+        if not carro:  # Lo creamos, vea
+            carro = self.session['carro'] = {}  # inicializamos el carro 
         self.carro = carro
 
     def agregar(self, producto):  #funcion que agregue los productos al carro

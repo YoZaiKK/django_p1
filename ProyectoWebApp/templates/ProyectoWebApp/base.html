@@ -28,8 +28,18 @@
 
   <body>
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-lower">Gestión de Pedidos</span>
+      <span class="site-heading-lower">Pagina perrona</span>
     </h1>
+    <div style="text-align:right; margin-right:30px; margin-bottom: 10px;color:white;">
+      {% if user.is_authenticated %}
+      <button type="button" class="btn btn-info" disabled>Hola {{user.username}}</button>&nbsp;&nbsp;
+      <a href="{% url 'cerrar_sesion' %}" class="btn btn-danger">Cerrar sesion</a> 
+      {% else %}
+      <a href="{% url "iniciar_sesion"%}" class="btn btn-primary">Login</a> &nbsp;&nbsp; 
+      <a href="{% url "Autenticacion" %}" class="btn btn-info">Registrate</a> &nbsp;&nbsp; 
+      
+      {% endif %}
+    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
