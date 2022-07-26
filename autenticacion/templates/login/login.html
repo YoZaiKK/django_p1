@@ -10,6 +10,11 @@
         <h1 style="margin: 3% 0 0 5%" class="card-title">Inicio de sesion</h1>
         <form method="post" action="" style="margin: 2% auto 5%; width:75%;">
             {% csrf_token %} 
+            {% if messages %}
+                {% for mensaje in messages %}
+                <button type="submit" class="btn btn-danger" disabled>{{mensaje}}</button>
+                {% endfor %}
+            {% endif %}
             {{form|crispy}} 
             <button type="submit" class="btn btn-primary">Iniciar</button>
         </form> 

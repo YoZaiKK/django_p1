@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib.messages import constants as mensajes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -142,3 +143,12 @@ EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = 'default from email'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+MESSAGE_TASG = {
+    mensajes.DEBUG: 'debug',
+    mensajes.INFO: 'info',
+    mensajes.SUCCESS: 'success',
+    mensajes.WARNING: 'warning',
+    mensajes.ERROR: 'danger', 
+}
+
