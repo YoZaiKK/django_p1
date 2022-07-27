@@ -20,6 +20,7 @@ def contacto(request):
             try: 
                 emailEnviado.send()
                 return redirect("/contacto/?valido")
-            except:
+            except Exception as e:
+                print(e)
                 return redirect("/contacto/?novalido")
     return render(request, 'contacto/contacto.html', {"miFormulario": formulario_contacto})

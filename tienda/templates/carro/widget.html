@@ -52,7 +52,7 @@
       {% if request.session.carro.items %} 
       <tr>
         <td colspan="3" style='text-align:center'>
-          <a href="#"class="btn btn-lg btn-primary btn-block">Comprar</a>
+          <a href="{% url "procesar_pedido" %}"class="btn btn-lg btn-primary btn-block">Comprar</a>
         </td>
       </tr>
       {% endif %}
